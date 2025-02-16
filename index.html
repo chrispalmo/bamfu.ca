@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bamfu Bamboo</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    /* Fixed header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+    header .logo {
+      font-size: 1.5em;
+    }
+    /* Desktop navigation */
+    nav.desktop-menu {
+      display: none;
+    }
+    nav.desktop-menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    /* Hamburger icon for mobile */
+    .hamburger {
+      font-size: 1.8em;
+      cursor: pointer;
+      display: block;
+    }
+    /* Mobile full-screen modal menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(51, 51, 51, 0.95);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1500;
+    }
+    .mobile-menu a {
+      color: #fff;
+      font-size: 1.5em;
+      margin: 20px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Page content sections */
+    main {
+      padding-top: 70px; /* leave space for fixed header */
+    }
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+    section:nth-of-type(odd) {
+      background: #f4f4f4;
+    }
+    section:nth-of-type(even) {
+      background: #fff;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    /* Team section styling */
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-member {
+      flex: 1 1 300px;
+      max-width: 400px;
+      margin: 20px;
+      text-align: center;
+      padding: 10px;
+    }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    /* Contact form styles */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    /* Responsive styles */
+    @media(min-width: 768px) {
+      nav.desktop-menu {
+        display: block;
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed header -->
+  <header>
+    <div class="logo">Bamfu Bamboo</div>
+    <nav class="desktop-menu">
+      <a href="#about">About</a>
+      <a href="#product">Product</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Mobile menu modal -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
+    <a href="#product" onclick="toggleMobileMenu()">Product</a>
+    <a href="#team" onclick="toggleMobileMenu()">Team</a>
+    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About</h2>
+      <p>Welcome to Bamfu Bamboo, where we deliver quality bamboo bundled to perfection for mountain operations.</p>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product">
+      <h2>Product</h2>
+      <p>Our bamboo products are sourced, treated, and bundled to meet rigorous safety and operational standards. Perfect for high-altitude environments.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+      <h2>Team</h2>
+      <div class="team">
+        <div class="team-member">
+          <img src="toddo_headshot.jpg" alt="Toddo Joyal">
+          <h3>Toddo Joyal</h3>
+          <p>Customer relations | Quality control | Company director</p>
+          <p>Toddo has over 17 years of experience in mountain patrol and rescue, leading ski patrol and emergency response teams in harsh, high-altitude environments across Canada. His hands-on experience informs every detail of our bamboo sourcing, treatment, and bundling process, ensuring rigorous safety and operational standards.</p>
+        </div>
+        <div class="team-member">
+          <img src="chris_headshot.jpg" alt="Chris Palmieri">
+          <h3>Chris Palmieri</h3>
+          <p>Partnerships | Logistics | Company director</p>
+          <p>Chris combines his expertise in engineering and project management with high-altitude mountaineering to ensure smooth operations and coordination from farm-to-slope.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="fullname">Full Name*</label>
+          <input type="text" id="fullname" name="fullname" required>
+          
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="mobile">Mobile</label>
+          <input type="tel" id="mobile" name="mobile">
+          
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+          
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          
+          <label>
+            <input type="checkbox" id="captcha" name="captcha" required>
+            I am a human*
+          </label>
+          
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Mobile menu toggle functionality
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu() {
+      if (mobileMenu.style.display === "flex") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "flex";
+        mobileMenu.style.flexDirection = "column";
+      }
+    }
+
+    hamburger.addEventListener('click', toggleMobileMenu);
+  </script>
+</body>
+</html>
+
