@@ -33,6 +33,11 @@
     header .logo {
       font-size: 1.5em;
     }
+    .logo img {
+      max-height: 50px;
+      width: auto;
+      display: block;
+    }
     /* Desktop navigation */
     nav.desktop-menu {
       display: none;
@@ -151,7 +156,9 @@
 <body>
   <!-- Fixed header -->
   <header>
-    <div class="logo">Bamfu Bamboo</div>
+    <div class="logo">
+      <img src="assets/images/bamfu_wordmark_sticker.png" alt="Bamfu Bamboo Wordmark" />
+    </div>
     <nav class="desktop-menu">
       <a href="#about">About</a>
       <a href="#product">Product</a>
