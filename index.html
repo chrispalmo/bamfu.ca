@@ -103,6 +103,29 @@
     p {
       margin-bottom: 15px;
     }
+    /* Home section background */
+    #home {
+      position: relative;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+                  url('assets/images/bamboo-forest.png');
+      background-size: cover;
+      background-position: center;
+    }
+  
+    /* Floating box for About section text */
+    .floating-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 0 200px black;
+      border-radius: 100px;
+    }
     /* Team section styling */
     .team {
       display: flex;
@@ -170,7 +193,6 @@
     </a>
     </div>
     <nav class="desktop-menu">
-      <a href="#about">About</a>
       <a href="#product">Product</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
@@ -180,7 +202,6 @@
 
   <!-- Mobile menu modal -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="toggleMobileMenu()">About</a>
     <a href="#product" onclick="toggleMobileMenu()">Product</a>
     <a href="#team" onclick="toggleMobileMenu()">Team</a>
     <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
@@ -188,10 +209,13 @@
 
   <!-- Main content -->
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>Welcome to Bamfu Bamboo, where we deliver quality bamboo bundled to perfection for mountain operations.</p>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="floating-box">
+        <h2>First Cut Bamboo.<br>Pre-Bundled for Instant, Hassle-Free Deployment.</h2>
+	<p>Streamline your mountain operations next season with Bamfu Bamboo.</p>
+      </div>
     </section>
 
     <!-- Product Section -->
