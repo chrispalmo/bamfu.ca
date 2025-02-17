@@ -86,7 +86,7 @@
       padding-top: 70px; /* leave space for fixed header */
     }
     section {
-      padding: 0px 20px 60px 20px;
+      padding: 0px 0px 60px 0px;
       min-height: 100vh;
     }
     section:nth-of-type(odd) {
@@ -123,21 +123,34 @@
       padding: 20px;
       text-align: center;
       max-width: 90%;
-      box-shadow: 0 0 200px black;
-      border-radius: 100px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+      border-radius: 20px;
     }
     /* Team section styling */
     .team {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      position: relative;
+    }
+    #team {
+      position: relative;
+      background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+                  url('assets/ski-resort-background.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      min-height: 100vh;
     }
     .team-member {
       flex: 1 1 300px;
       max-width: 400px;
       margin: 20px;
       text-align: center;
-      padding: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
     }
     .team-member img {
       width: 150px;
@@ -221,12 +234,12 @@
     <!-- Product Section -->
     <section id="product">
       <h2>Product</h2>
-      <p>Our bamboo products are sourced, treated, and bundled to meet rigorous safety and operational standards. Perfect for high-altitude environments.</p>
+      <p>We do one thing and we do it damn well. If you're here reading this, you know what it is that we do.</p>
     </section>
 
     <!-- Team Section -->
     <section id="team">
-      <h2>Team</h2>
+      <h2>Meet the team</h2>
       <div class="team">
         <div class="team-member">
           <img src="assets/toddo_headshot.jpg" alt="Toddo Joyal">
