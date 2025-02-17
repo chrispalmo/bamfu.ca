@@ -247,7 +247,15 @@
       }
     }
 
+    // Toggle when hamburger is clicked
     hamburger.addEventListener('click', toggleMobileMenu);
+
+    // Allow clicking anywhere on the mobile menu (outside child elements) to close it
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
   </script>
 </body>
 </html>
