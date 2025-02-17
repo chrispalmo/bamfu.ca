@@ -251,7 +251,7 @@
   </main>
 
   <footer style="background: #333; color: #fff; text-align: center; padding: 20px; font-size: 0.8em;">
-    <p>© 2025 Bamfu Bamboo Ltd. All Rights Reserved.</p>
+    <p>© <span id="currentYear"></span> Bamfu Bamboo Ltd. All Rights Reserved.</p>
     <p>Bamfu Bamboo Ltd. is proud to support and contribute to our Alberta communities. Thank you for supporting local!</p>
     <p style="margin-top: 20px;"><a href="#top" style="color: #fff; text-decoration: none;">▴ Back to top</a></p>
   </footer>
@@ -279,6 +279,9 @@
         toggleMobileMenu();
       }
     });
+
+    // Set dynamic current year in footer
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
