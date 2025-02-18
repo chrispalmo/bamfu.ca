@@ -134,8 +134,7 @@
       background-size: cover;
       background-position: center;
     }
-  
-    /* Floating box for About section text */
+    /* Floating box for home section text */
     .floating-box {
       position: absolute;
       top: 50%;
@@ -148,6 +147,20 @@
       max-width: 90%;
       box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
       border-radius: 20px;
+    }
+    /* Content container for about section */
+    .content-container {
+      max-width: 960px; /* Maximum width for content */
+      margin: 0 auto;   /* Center content horizontally */
+      padding: 0 20px;  /* Optional padding for some space on the sides */
+    }
+    /* Indent the unordered list and list items */
+    ul {
+      list-style-position: inside; /* Makes the bullets inside the list */
+    }
+    
+    li {
+      margin-bottom: 10px; /* Optional: Adds space between list items */
     }
     /* Team section styling */
     .team {
@@ -229,7 +242,7 @@
     </a>
     </div>
     <nav class="desktop-menu">
-      <a href="#product">Product</a>
+      <a href="#about">About</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -238,7 +251,7 @@
 
   <!-- Mobile menu modal -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#product" onclick="toggleMobileMenu()">Product</a>
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
     <a href="#team" onclick="toggleMobileMenu()">Team</a>
     <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
   </div>
@@ -254,12 +267,36 @@
       </div>
     </section>
 
-    <!-- Product Section -->
-    <section id="product">
-      <h2>Product</h2>
-      <p>We do one thing and we do it damn well. If you're here reading this, you know what it is that we do.</p>
+    <section id="about">
+      <h2>Why choose Bamfu bamboo?</h2>
+      <div class="content-container"> 
+        <p>
+          We deliver bamboo poles in custom bundles suited to the unique deployment constraints of ski resort operations.
+        </p>
+        <p>
+          The poles are 8 feet in length and 1 inch in diameter, perfectly sized for a variety of ski resort uses, from snow farming to boundary demarcation and egress fencing. 
+        </p>
+        <p>
+          <strong>Highest quality:</strong> Our bamboo is sourced from first-cut (the youngest and toughest portion) Pseudosasa Amabilis (Tonkin Cane), dried and treated, often withstanding harsh conditions for multiple seasons.
+        </p>
+        <p>
+          <strong>Ready to deploy:</strong> Say goodbye to wasted days spent unpacking, counting, and re-bundling the bamboo before it even sees the mountain. Each ~15kg bundle is securely tied at both ends with orange polypropylene rope, with adjustable knots, ready for immediate deployment.
+        </p>
+        <p>
+          <strong>A partner you can trust:</strong> Our bundling crew has been trained directly by our staff with extensive experience in mountain rescue and ski patrol, ensuring the bundling meets the unique needs of mountain resort operations while adhering to industry standards for safe and efficient bundling.
+        </p>
+        <p>
+          <strong>Cost-Effective:</strong> By providing direct-to-resort delivery, we cut out middlemen to bring competitive pricing while maintaining a superior product quality.
+        </p>
+        <p>
+          <strong>Eco-Friendly:</strong> Bamboo is an environmentally friendly material, offering an eco-conscious alternative to plastic and other synthetic products commonly used for ski resort operations.
+        </p>
+        <p>
+          Bamfu bamboo is not just a product – it's an operational  solution. By choosing Bamfu Bamboo, you're ensuring that your resort's operational setup is faster, more efficient, and more cost-effective. 
+        </p>
+      </div>
     </section>
-
+    
     <!-- Team Section -->
     <section id="team">
       <h2>Meet the team</h2>
