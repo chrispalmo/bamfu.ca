@@ -112,11 +112,15 @@
       padding: 20px 20px 60px 20px;
       min-height: 100vh;
     }
-    section:nth-of-type(odd) {
-      background: #f4f4f4;
-    }
-    section:nth-of-type(even) {
-      background: #fff;
+    /* Apply the styles only to About, Team, and Contact sections */
+    #about, #team, #contact {
+      padding: 20px;
+      padding-bottom: 60px;
+      min-height: auto;      /* Allow sections to grow/shrink based on content */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;  /* Align content from the top */
+      width: 100%;
     }
     h2 {
       padding-top: 20px;
@@ -176,7 +180,6 @@
       background-size: cover;
       background-position: center;
       padding: 60px 20px;
-      min-height: 100vh;
     }
     .team-member {
       flex: 1 1 300px;
@@ -197,8 +200,11 @@
     }
     /* Contact form styles */
     .contact-form {
-      max-width: 600px;
+      /* Reset form styling to adjust with the section changes */
+      max-width: 600px; 
+      width: 100%;       
       margin: 0 auto;
+      padding: 20px;
     }
     .contact-form label {
       display: block;
